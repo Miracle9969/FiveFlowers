@@ -93,40 +93,40 @@
 	<update id="updateOrderByStatus" parameterType="com.whjx.pojo.Order">
 		UPDATE w_order
 		<trim prefix="set" suffixOverrides=",">
-			<if test="order.orderId != null and order.orderId != ''">
-				order_id = #{order.orderId},
+			<if test="orders.orderId != null and orders.orderId != ''">
+				order_id = #{orders.orderId},
 			</if>
-			<if test="order.orderUserId != null and order.orderUserId != ''">
-				order_user_d = #{order.orderUserId},
+			<if test="orders.orderUserId != null and orders.orderUserId != ''">
+				order_user_id = #{orders.orderUserId},
 			</if>
-			<if test="order.orderAdId != null and order.orderAdId != ''">
-				order_ad_id = #{order.orderAdId},
+			<if test="orders.orderAdId != null and orders.orderAdId != ''">
+				order_ad_id = #{orders.orderAdId},
 			</if>
-			<if test="order.orderPayId != null and order.orderPayId != ''">
-				order_pay_id = #{order.orderPayId},
+			<if test="orders.orderPayId != null and orders.orderPayId != ''">
+				order_pay_id = #{orders.orderPayId},
 			</if>
-			<if test="order.orderNumber != null and order.orderNumber != ''">
-				order_number = #{order.orderNumber},
+			<if test="orders.orderNumber != null and orders.orderNumber != ''">
+				order_number = #{orders.orderNumber},
 			</if>
-			<if test="order.orderFoundTime != null and order.orderFoundTime != ''">
-				order_found_time = #{order.orderFoundTime},
+			<if test="orders.orderFoundTime != null and orders.orderFoundTime != ''">
+				order_found_time = #{orders.orderFoundTime},
 			</if>
-			<if test="order.orderPaymentTime != null and order.orderPaymentTime != ''">
-				order_payment_time = #{order.orderPaymentTime},
+			<if test="orders.orderPaymentTime != null and orders.orderPaymentTime != ''">
+				order_payment_time = #{orders.orderPaymentTime},
 			</if>
-			<if test="order.orderShipmentsTime != null and order.orderShipmentsTime != ''">
-				order_shipments_time = #{order.orderShipmentsTime},
+			<if test="orders.orderShipmentsTime != null and orders.orderShipmentsTime != ''">
+				order_shipments_time = #{orders.orderShipmentsTime},
 			</if>
-			<if test="order.orderReceivingTime != null and order.orderReceivingTime != ''">
-				order_receiving_time = #{order.orderReceivingTime},
+			<if test="orders.orderReceivingTime != null and orders.orderReceivingTime != ''">
+				order_receiving_time = #{orders.orderReceivingTime},
 			</if>
-			<if test="order.orderFreight != null and order.orderFreight != ''">
-				order_freight = #{order.orderFreight},
+			<if test="orders.orderFreight != null and orders.orderFreight != ''">
+				order_freight = #{orders.orderFreight},
 			</if>
-			<if test="order.orderActualPayment != null and order.orderActualPayment != ''">
-				order_actual_payment = #{order.orderActualPayment},
+			<if test="orders.orderActualPayment != null and orders.orderActualPayment != ''">
+				order_actual_payment = #{orders.orderActualPayment},
 			</if>
 		</trim>
-		where order_delivery_status = #{order.orderDeliveryStatus}
+		where order_delivery_status = #{orders.orderDeliveryStatus}
 	</update>
 </mapper>

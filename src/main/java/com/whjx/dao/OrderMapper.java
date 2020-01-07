@@ -10,5 +10,5 @@ import java.util.List;
 public interface OrderMapper {
     List<Order> getOrderAll(@Param("order") Order order);
     Order getOrderByStatus(@Param("ods") int orderDeliveryStatus);
-    int updateOrderByStatus(@Param("order") Order order);
+    int updateOrderByStatus(@Param("orders") Order order);
 }
